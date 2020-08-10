@@ -30,7 +30,7 @@ jobs:
     # 处理各个Docker Registry的登录
     - name: Login Registrys
       run: |
-        echo "Login Aliyun Docker Registry" | docker login --username=${{ secrets.ALIYUN_DOCKER_REGISTRY_USERNAME }} --password-stdin registry.cn-shanghai.aliyuncs.com
+        echo "Login Aliyun Docker Registry" | docker login --username=${{ secrets.ALIYUN_DOCKER_REGISTRY_USERNAME }} --password=${{ secrets.ALIYUN_DOCKER_REGISTRY_PASSWORD }} registry.cn-shanghai.aliyuncs.com
       
     # 拉取镜像
     - name: Pull Image
