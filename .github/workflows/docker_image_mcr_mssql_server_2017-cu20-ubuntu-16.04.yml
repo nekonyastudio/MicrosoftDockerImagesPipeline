@@ -9,12 +9,7 @@ on:
     branches: [ mssql ]
   pull_request:
     branches: [ mssql ]
-  workflow_run:
-    workflows: ["Run Tests"]
-    branches: [ mssql ]
-    types: 
-      - completed
-      - requested
+  workflow_dispatch:  
   
 env: 
   MCR_IMAGE_PATH:  mcr.microsoft.com/mssql/server:2017-CU20-ubuntu-16.04 
