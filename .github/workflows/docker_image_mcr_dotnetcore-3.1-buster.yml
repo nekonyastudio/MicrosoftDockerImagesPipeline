@@ -1,20 +1,20 @@
 # This is a basic workflow to help you get started with Actions
 
-name: mssql_server_2017-cu20-ubuntu-16.04
+name: dotnet-core-3.1-buster
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
-    branches: [ mssql ]
+    branches: [ dotnet ]
   pull_request:
-    branches: [ mssql ]
+    branches: [ dotnet ]
   workflow_dispatch:  
   
 env: 
-  MCR_IMAGE_PATH:  mcr.microsoft.com/mssql/server:2017-CU20-ubuntu-16.04 
-  DOCKER_HUB_IMAGE_PATH: yomunsam/microsoft-mssql-server:2017-CU20-ubuntu-16.04
-  ALIYUN_IMAGE_PATH: registry.cn-shanghai.aliyuncs.com/yomunsam/microsoft-mssql-server:2017-CU20-ubuntu-16.04 
+  MCR_IMAGE_PATH:  mcr.microsoft.com/dotnet/core/sdk:3.1-buster
+  DOCKER_HUB_IMAGE_PATH: nekonya/mcr-dotnetcore-sdk:3.1-buster
+  ALIYUN_IMAGE_PATH: registry.cn-shanghai.aliyuncs.com/nekonya/mcr-dotnetcore-sdk:3.1-buster
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
