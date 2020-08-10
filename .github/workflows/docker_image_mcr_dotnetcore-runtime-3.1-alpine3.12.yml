@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: dotnet-core-runtime-3.1-buster
+name: dotnet-core-runtime-3.1-alpine3.12
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -12,9 +12,9 @@ on:
   workflow_dispatch:  
   
 env: 
-  MCR_IMAGE_PATH:  mcr.microsoft.com/dotnet/core/runtime:3.1-buster-slim
-  DOCKER_HUB_IMAGE_PATH: nekonya/mcr-dotnetcore-runtime:3.1-buster-slim
-  ALIYUN_IMAGE_PATH: registry.cn-shanghai.aliyuncs.com/nekonya/mcr-dotnetcore-runtime:3.1-buster-slim
+  MCR_IMAGE_PATH:  mcr.microsoft.com/dotnet/core/runtime:3.1-alpine3.12
+  DOCKER_HUB_IMAGE_PATH: nekonya/mcr-dotnetcore-runtime:3.1-alpine3.12
+  ALIYUN_IMAGE_PATH: registry.cn-shanghai.aliyuncs.com/nekonya/mcr-dotnetcore-runtime:3.1-alpine3.12
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
